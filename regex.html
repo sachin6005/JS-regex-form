@@ -5,10 +5,10 @@
     <link href="regex.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-            <form id="form">
-                <input id="username" name="Username" type="text" placeholder="Username">
+            <form id="form"; onsubmit="event.preventDefault()"; autocomplete="off" >
+                <input id="username" name="Username" type="text" placeholder="Username" required>
                 <p id="username-error">please enter valid username</p>
-                <input  id="password" name="password" type="password" placeholder="Password">
+                <input  id="password" name="password" type="password" placeholder="Password" required>
                 <p id="password-error">your password is weak</p>
                 <input  id="submit" name="Login" type="submit" value="Login">
             </form>
