@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 	<html>
 	<head>
-	<title>regular exoression</title>
+	<title>regular expression</title>
     <link href="regex.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-            <form id="form"; onsubmit="event.preventDefault()"; autocomplete="off" >
+            <form id="form";  autocomplete="off" >
                 <input id="username" name="Username" type="text" placeholder="Username" required>
                 <p id="username-error">please enter valid username</p>
+                <input  id="email" name="email" type="email" placeholder="email" required>
+                <p id="email-error">your email is not valid</p>
+                <input  id="mobile" name="mobilenumber" type="tel" placeholder="Mobile number" required>
+                <p id="mobile-error">91-(10digit mobilenumber)</p>
                 <input  id="password" name="password" type="password" placeholder="Password" required>
                 <p id="password-error">your password is weak</p>
+                
                 <input  id="submit" name="Login" type="submit" value="Login">
             </form>
     </body>

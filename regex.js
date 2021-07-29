@@ -1,4 +1,4 @@
-
+var form = document.getElementById("form")
 var username = document.getElementById("username")
 var usernameErr = document.getElementById("username-error")
 username.addEventListener('input', function(e){
@@ -12,6 +12,46 @@ username.addEventListener('input', function(e){
               else{
                usernameErr.style.display = 'block'
             }
+            username.addEventListener('blur',function(){
+              usernameErr.style.display = 'none'
+            })
+    })
+
+    var email = document.getElementById("email")
+    var emailErr = document.getElementById("email-error")
+    email.addEventListener('input', function(e){
+       console.log(e.target.value)
+        var pattern = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-zA-Z]{2,10})(.[a-zA-Z]{2,10}?)$/;
+        var emailValue = e.target.value;
+        var validmail = pattern.test(emailValue);
+            if(validmail){
+              emailErr.style.display = 'none'
+            }
+              else{
+               emailErr.style.display = 'block'
+            }
+            email.addEventListener('blur',function(){
+              emailErr.style.display = 'none'
+            })
+            
+    })
+
+    var mobile = document.getElementById("mobile")
+    var mobileErr = document.getElementById("mobile-error")
+    mobile.addEventListener('input', function(e){
+       console.log(e.target.value)
+        var pattern = /^91-[0-9]{10}$/;
+        var mobileValue = e.target.value;
+        var validNum = pattern.test(mobileValue);
+            if(validNum){
+              mobileErr.style.display = 'none'
+            }
+              else{
+               mobileErr.style.display = 'block'
+            }
+            mobile.addEventListener('blur',function(){
+              mobileErr.style.display = 'none'
+            })
             
     })
 
@@ -28,11 +68,16 @@ username.addEventListener('input', function(e){
        else{
            passwordErr.style.display = 'block'
        }
+       password.addEventListener('blur',function(){
+        passwordErr.style.display = 'none'
+      })
     })
-     var submit = document.getElementById('submit')
-    var form = document.getElementById("form")
-    form.addEventListener('submit',function(e){
-        console.log('form is submitted')
+
+
+
+    //  var submit = document.getElementById('submit')
+    // submit.addEventListener('submit',function(e){
+    //     console.log('form is submitted')
        
-    })
+    // })
   
