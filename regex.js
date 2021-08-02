@@ -8,9 +8,13 @@ username.addEventListener('input', function(e){
         var validUser = pattern.test(inputValue);
             if(validUser){
               usernameErr.style.display = 'none'
+              username.style.borderStyle = 'solid'
+              username.style.borderColor = 'green'
             }
               else{
                usernameErr.style.display = 'block'
+               username.style.borderStyle = 'solid'
+               username.style.borderColor = 'red'
             }
             username.addEventListener('blur',function(){
               usernameErr.style.display = 'none'
@@ -26,9 +30,14 @@ username.addEventListener('input', function(e){
         var validmail = pattern.test(emailValue);
             if(validmail){
               emailErr.style.display = 'none'
+              email.style.borderStyle = 'solid'
+              email.style.borderColor = 'green'
+
             }
               else{
                emailErr.style.display = 'block'
+               email.style.borderStyle = 'solid'
+               email.style.borderColor = 'red'
             }
             email.addEventListener('blur',function(){
               emailErr.style.display = 'none'
@@ -45,9 +54,13 @@ username.addEventListener('input', function(e){
         var validNum = pattern.test(mobileValue);
             if(validNum){
               mobileErr.style.display = 'none'
+              mobile.style.borderStyle = 'solid'
+              mobile.style.borderColor = 'green'
             }
               else{
                mobileErr.style.display = 'block'
+               mobile.style.borderStyle = 'solid'
+               mobile.style.borderColor = 'red'
             }
             mobile.addEventListener('blur',function(){
               mobileErr.style.display = 'none'
@@ -64,9 +77,13 @@ username.addEventListener('input', function(e){
        var validPassword = pattern1.test(passwordValue);
        if(validPassword){
            passwordErr.style.display = 'none'
+           password.style.borderStyle = 'solid'
+           password.style.borderColor = 'green'
        }
        else{
            passwordErr.style.display = 'block'
+           password.style.borderStyle = 'solid'
+           password.style.borderColor = 'red'
        }
        password.addEventListener('blur',function(){
         passwordErr.style.display = 'none'
@@ -80,4 +97,22 @@ username.addEventListener('input', function(e){
     //     console.log('form is submitted')
        
     // })
+
+function formsubmit(){
+  if
+ ( username.style.borderColor = 'red',
+  email.style.borderColor = 'red',
+  mobile.style.borderColor = 'red',
+  password.style.borderColor = 'red')  {
+    alert('please enter correct input')
+    
+  }
+  else( username.style.borderColor = 'green',
+  email.style.borderColor = 'green',
+  mobile.style.borderColor = 'green',
+  password.style.borderColor = 'green') 
+  {
+    return true;
+  }
+}
   
